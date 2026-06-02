@@ -1,0 +1,16 @@
+# Focused RL bootcamp requirements — pinned to the versions currently
+# installed in the FCL conda env (so re-running the install cell does NOT
+# downgrade matplotlib / scipy / pandas / torch).
+#
+# Snapshot of the full env is stored in requirements_snapshot.txt and is
+# what the "Revert" cell at the end of the notebook restores.
+
+numpy==1.26.4
+scipy==1.15.3
+matplotlib==3.10.6
+pandas==2.3.3
+gymnasium==0.29.1
+# torch is already installed as the CUDA build (2.7.1+cu128).
+# We deliberately do NOT pin torch here so pip won't try to replace the
+# CUDA wheel with a CPU one. Install torch separately if missing.
+stable-baselines3==2.3.2
